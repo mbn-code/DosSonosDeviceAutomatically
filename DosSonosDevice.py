@@ -7,7 +7,7 @@ def script():
             while len(str(device)) != 0:
                 print("Currently dossing device::  ", device)
                 device.stop()
-            else:
+            if len(str(device)) == 0:
                 print("Check if the device is up and running on the network")
 
         device = soco.discovery.any_soco()
@@ -18,8 +18,8 @@ def script():
                 start_dos()
             elif Dos.lower() == "n":
                 exit()  
-        else: 
-            print("No devices found on the network")
+        if len(str(device)) == 0: 
+            print("No devices found on the network, make sure the device is up and running")
     except:
         if KeyboardInterrupt:
             exit_questionmark = input("Do you really want to exit [y/n]?: ")
