@@ -22,7 +22,8 @@ def script():
                 if Dos.lower() == "y":
                     start_dos()
                 elif Dos.lower() == "n":
-                    exit()  
+                    print("exiting now. .")
+                    exit()
     except:
         # I am checking if ctrl + c is being pressed so the script 
         # Can be stopped immediately when you want it to. 
