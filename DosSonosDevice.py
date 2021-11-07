@@ -1,4 +1,4 @@
-def script():
+def script():    
     try:
         import soco
         def start_dos():
