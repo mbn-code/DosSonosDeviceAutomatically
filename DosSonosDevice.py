@@ -11,24 +11,23 @@ def script():
 
         device = soco.discovery.any_soco()
         if len(str(device)) != 0:
-            print("Discovered device on network", device)
-            Dos = input("Do you want to start the test [y/n]?: ")
-            if Dos.lower() == "y":
-                start_dos()
-            elif Dos.lower() == "n":
-                exit()  
-        if len(str(device)) == 0: 
-            print("No devices found on the network, make sure the device is up and running")
+            if device == None:
+                print("No device found on the network")
+                print("Exiting the test . .")
+                import os
+                os._exit()
+            else:
+                print("Discovered device on network", device)
+                Dos = input("Do you want to start the test [y/n]?: ")
+                if Dos.lower() == "y":
+                    start_dos()
+                elif Dos.lower() == "n":
+                    exit()  
     except:
         # I am checking if ctrl + c is being pressed so the script 
         # Can be stopped immediately when you want it to. 
         if KeyboardInterrupt:
-            exit_questionmark = input("Do you really want to exit [y/n]?: ")
-            print("If you press Ctrl + C again after not exiting, the program will stop.")
-            if exit_questionmark.lower() == "y":
-                exit()
-            elif exit_questionmark.lower() == "n":
-                start_dos()
+            exit()
 
 if __name__ == "__main__":
     script()
