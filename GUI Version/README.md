@@ -1,2 +1,2 @@
 
-Here there will be added a GUI version, it has not been added yet.
+The GUI version is not finished, I just started on the gui version
