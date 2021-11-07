@@ -16,7 +16,7 @@ def start_dos():
     if len(str(device)) == 0:
         print("Check if the device is up and running on the network")
 
-button_start = Button(root, text="start dos attack", command=start_dos).pack()
+button_start = Button(root, text="start dos attack", command=start_dos()).pack()
 
 button_exit = Button(root, text="EXIT ", command=exit).pack()
 
