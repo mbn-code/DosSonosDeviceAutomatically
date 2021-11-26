@@ -27,8 +27,7 @@ def start_dos():
     if device == None:
         print("No device found on network")
         print("Exiting test. .")
-        import os
-        os._exit()
+        exit()
     else:
         screen_dos_notify()
     if len(str(device)) == 0:
