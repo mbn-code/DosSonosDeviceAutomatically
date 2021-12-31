@@ -1,4 +1,9 @@
 # DosSonosDeviceAutomatically
+
+
+!!Currently only the GUI version is working. It shuts off the Sonos immediatly and stops working until you exit.
+
+
 Dos a Sonos device on local network automatically.
 
 Clone and start.
